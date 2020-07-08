@@ -9,7 +9,7 @@ jdk:
 install: 
   - whereis libjnidispatch.so
   - sudo whereis libjnidispatch.so
-  - if [ "${TRAVIS_CPU_ARCH}" == "arm64" ]; then sudo apt-get install libjna-java; whereis libjnidispatch.so; sudo whereis libjnidispatch.so; ls /usr/lib/jni; fi
+  - if [ "${TRAVIS_CPU_ARCH}" == "arm64" ]; then sudo apt-get install libjna-java; whereis libjnidispatch.so; sudo whereis libjnidispatch.so; whereis libjnidispatch.system.so; fi
   - ./installViaTravis.sh
 script: ./buildViaTravis.sh
 env:
