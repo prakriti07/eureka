@@ -1,9 +1,6 @@
 os: linux
 dist: xenial
 language: java
-arch:
-- amd64
-- arm64
 jdk:
 - openjdk8
 install: ./installViaTravis.sh
