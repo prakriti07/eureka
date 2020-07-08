@@ -6,7 +6,9 @@ dist: xenial
 language: java
 jdk:
 - openjdk8
-install: ./installViaTravis.sh
+install: 
+  - if [ "${TRAVIS_CPU_ARCH}" == "arm64" ]; then sudo apt-get install libjna-java; fi
+  - ./installViaTravis.sh
 script: ./buildViaTravis.sh
 env:
   global:
