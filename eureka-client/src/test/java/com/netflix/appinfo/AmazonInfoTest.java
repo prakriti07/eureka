@@ -17,7 +17,7 @@ public class AmazonInfoTest {
                 "  \"imageId\" : \"ami-someId\",\n" +
                 "  \"instanceType\" : \"m1.small\",\n" +
                 "  \"version\" : \"2000-00-00\",\n" +
-                "  \"architecture\" : \"x86_64\",\n" +
+                "  \"architecture\" : \"arm64\",\n" +
                 "  \"accountId\" : \"1111111111\",\n" +
                 "  \"instanceId\" : \"i-someId\",\n" +
                 "  \"billingProducts\" : null,\n" +
