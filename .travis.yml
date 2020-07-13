@@ -7,9 +7,8 @@ language: java
 jdk:
 - openjdk8
 install: 
-  - whereis libjnidispatch.so
-  - sudo whereis libjnidispatch.so
-  - if [ "${TRAVIS_CPU_ARCH}" == "arm64" ]; then sudo apt-get install libjna-java; whereis libjnidispatch.so; sudo whereis libjnidispatch.so; whereis libjnidispatch.system.so; fi
+  - if [ "${TRAVIS_CPU_ARCH}" == "arm64" ]; then sudo apt-get install openjdk-8-jdk; export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-8-hotspot-arm64; fi
+  #- apt-get install libjna-java
   - ./installViaTravis.sh
 script: ./buildViaTravis.sh
 env:
