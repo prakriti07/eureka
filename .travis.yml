@@ -9,6 +9,7 @@ jdk:
 install: 
   - if [ "${TRAVIS_CPU_ARCH}" == "arm64" ]; then sudo apt-get install openjdk-8-jdk; export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-arm64; wget https://repo1.maven.org/maven2/net/java/dev/jna/jna/4.2.1/jna-4.2.1.jar; unzip jna-4.2.1.jar; mv com/sun/jna/linux-aarch64/libjnidispatch.so .; fi
   #- apt-get install libjna-java
+  - export PATH=/home/travis/com/sun/jna/linux-aarch64/libjnidispatch.so:$PATH
   - ./installViaTravis.sh
 script: ./buildViaTravis.sh
 env:
